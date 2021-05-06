@@ -274,7 +274,7 @@ class TerserPlugin {
         if (initializedWorker) {
           return initializedWorker;
         }
-
+        //使用jest-worker来多进程执行命令
         initializedWorker =
           /** @type {MinifyWorker} */
           (new Worker(require.resolve("./minify"), {
